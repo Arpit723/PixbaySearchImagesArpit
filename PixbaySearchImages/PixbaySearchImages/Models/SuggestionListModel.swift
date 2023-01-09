@@ -20,10 +20,18 @@ struct SuggesionListModel {
     public mutating func addToSuggestionString(recentSearch: String) {
         suggestionListStrings.insert(recentSearch,
                                      at: 0)
+        if suggestionListStrings.count > AppConstants.maxSuggestionListToShow {
+            suggestionListStrings.removeLast()
+        }
+        UserDefaults.standard.set(suggestionListStrings,
+                                  forKey: UserDefaultKeys.suggestionList)
     }
     
     public func getSuggesionList() -> [String] {
-        return suggestionListStrings
+        let suggestionList = UserDefaults.standard.value(forKey: UserDefaultKeys.suggestionList) as? [String] ?? [String]()
+        return suggestionList
     }
+    
+    
     
 }

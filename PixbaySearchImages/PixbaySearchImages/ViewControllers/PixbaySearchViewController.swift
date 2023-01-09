@@ -13,7 +13,7 @@ class PixbaySearchViewController: UITableViewController {
     let searchController = UISearchController(searchResultsController: nil)
     var searchImagesArray = [Hit]()
     let viewModel = SearchImagesViewModel()
-    var isToShowSuggestionList = true
+    var isToShowSuggestionList = false
     // MARK: - Component
     lazy var indicatorView: UIActivityIndicatorView = {
       let view = UIActivityIndicatorView(style: .large)
