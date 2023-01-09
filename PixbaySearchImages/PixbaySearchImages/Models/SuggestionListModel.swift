@@ -20,6 +20,7 @@ struct SuggesionListModel {
     public mutating func addToSuggestionString(recentSearch: String) {
         suggestionListStrings.insert(recentSearch,
                                      at: 0)
+        // Showing maximum lest say 10 suggestion list
         if suggestionListStrings.count > AppConstants.maxSuggestionListToShow {
             suggestionListStrings.removeLast()
         }

@@ -45,6 +45,9 @@ extension PixbaySearchViewController {
         }
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        if isToShowSuggestionList {
+            let searchText = SuggesionListModel.shared.getSuggesionList()[indexPath.item]
+            viewModel.callGetSearchImagesAPI(for: searchText)
+        }
     }
 }

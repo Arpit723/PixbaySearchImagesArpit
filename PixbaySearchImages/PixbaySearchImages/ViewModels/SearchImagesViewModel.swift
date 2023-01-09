@@ -29,7 +29,7 @@ class SearchImagesViewModel {
 //MARK: Search Utility
 extension SearchImagesViewModel {
     
-    func getSearchKeywords(from searchString: String) -> String  {
+    private func getSearchKeywords(from searchString: String) -> String  {
         let keyowrdsArray =  searchString.components(separatedBy: " ")
         let searchKeywords = keyowrdsArray.joined(separator: "+")
         print("searchString \(searchKeywords)")
