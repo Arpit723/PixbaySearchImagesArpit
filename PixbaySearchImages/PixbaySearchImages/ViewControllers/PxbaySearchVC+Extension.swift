@@ -22,15 +22,15 @@ extension PixbaySearchViewController {
             switch isLoading {
                 case .loading:
                     print("loading")
-//                    self.activityIndicator.startAnimating()
+                    self.indicatorView.startAnimating()
                 case .success(let users):
                     print("Success")
-//                    self.activityIndicator.stopAnimating()
+                    self.indicatorView.stopAnimating()
                     self.searchImagesArray = users
                     self.tableViewSearch.reloadData()
                 case .failure(let errorMessage):
                     print("errorMessage \(errorMessage)")
-//                    self.activityIndicator.stopAnimating()
+                    self.indicatorView.stopAnimating()
                 default:
                     print("default case")
             }
@@ -58,9 +58,13 @@ extension PixbaySearchViewController {
         guard let cell: ImageTableViewCell = tableView.dequeueReusableCell(withIdentifier: "ImageTableViewCell", for: indexPath) as? ImageTableViewCell else {
             return UITableViewCell()
         }
-        cell.lblTags.text = "Baba"
+        
+        let searchItem = searchImagesArray[indexPath.row]
+        cell.imageViewPixbayItem.showImageWithTheUseOfKingfisher(from: searchItem.userImageURL)
+        cell.lblTags.text = searchItem.tags
         return cell
     }
+
 }
 
 //MARK: TableView Delegate
@@ -69,4 +73,13 @@ extension PixbaySearchViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
     }
+}
+
+
+//MARK: Utility
+extension PixbaySearchViewController {
+    
+    
+    
+    
 }
