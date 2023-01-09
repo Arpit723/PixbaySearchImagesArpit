@@ -19,9 +19,9 @@ import UIKit
 
 class WebSerice {
 
-    static func getDataApiCall(completion:
+    static func getDataApiCall(searchKeywords: String, completion:
                                @escaping (Result<SearchResponseModel, ApiError>) -> Void) {
-        let url = URL(string: "https://pixabay.com/api/?key=\(AppConstants.PixbaySearchAPIKey)&q=a&image_type=photo")!
+        let url = URL(string: "https://pixabay.com/api/?key=\(AppConstants.PixbaySearchAPIKey)&q=\(searchKeywords)&image_type=photo")!
 
         var request = URLRequest(url: url)
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")

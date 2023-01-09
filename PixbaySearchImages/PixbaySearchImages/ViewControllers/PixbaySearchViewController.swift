@@ -13,12 +13,12 @@ class PixbaySearchViewController: UITableViewController {
     let searchController = UISearchController(searchResultsController: nil)
     var searchImagesArray = [Hit]()
     let viewModel = SearchImagesViewModel()
+    var isToShowSuggestionList = true
     // MARK: - Component
     lazy var indicatorView: UIActivityIndicatorView = {
       let view = UIActivityIndicatorView(style: .large)
       view.color = .black
-      view.startAnimating()
-       view.hidesWhenStopped = true
+      view.hidesWhenStopped = true
       view.translatesAutoresizingMaskIntoConstraints = false
       return view
     }()
@@ -32,7 +32,8 @@ class PixbaySearchViewController: UITableViewController {
         bindSearchListViewModel()
         setUpTableView()
         setUpSearchController()
-        viewModel.getUserData()
+//        viewModel.callGetSearchImagesAPI()
+        // Show previous searches
     }
 
     func setUpTableView() {
@@ -44,6 +45,7 @@ class PixbaySearchViewController: UITableViewController {
        searchController.hidesNavigationBarDuringPresentation = false
        searchController.dimsBackgroundDuringPresentation = false
        searchController.searchBar.sizeToFit()
+        searchController.searchBar.delegate = self
        self.tableView.tableHeaderView = searchController.searchBar
     }
     

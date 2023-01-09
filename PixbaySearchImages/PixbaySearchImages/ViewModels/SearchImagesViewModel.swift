@@ -12,9 +12,11 @@ import Foundation
 class SearchImagesViewModel {
     
     let showLoadingHud: Observable<SearchAPIStatus> = Observable(.noStatus)
-    func getUserData() {
+    func callGetSearchImagesAPI(for searchString: String,
+                                isCalledFromSearchButtonTapped: Bool = false) {
         self.showLoadingHud.value = .loading
-        WebSerice.getDataApiCall(completion: { result in
+        let searchKeywords = getSearchKeywords(from: searchString)
+        WebSerice.getDataApiCall(searchKeywords: searchKeywords, completion: { result in
             switch result {
                 case .success(let responseData):
                     self.showLoadingHud.value = .success(data: responseData.hits)
@@ -23,4 +25,16 @@ class SearchImagesViewModel {
             }
         })
     }
+}
+
+//MARK: Search Utility
+extension SearchImagesViewModel {
+    
+    func getSearchKeywords(from searchString: String) -> String  {
+        let keyowrdsArray =  searchString.components(separatedBy: " ")
+        let searchKeywords = keyowrdsArray.joined(separator: "+")
+        print("searchString \(searchKeywords)")
+        return searchKeywords
+    }
+    
 }

@@ -9,4 +9,9 @@ import Foundation
 
 struct AppConstants {
     static let PixbaySearchAPIKey = "32719220-a257020a510d0cff7169a6471"
+    static let AppName = "PixbaySearch"
+}
+
+enum MessageStrings: String {
+     case  noImagesFound = "Sorry, No images found for your search."
 }
