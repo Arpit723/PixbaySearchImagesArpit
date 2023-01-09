@@ -30,7 +30,7 @@ class WebSerice {
                 if let data = data {
                     if let response = try? JSONDecoder().decode(SearchResponseModel.self,
                                                                             from: data) {
-                        print(response)
+//                        print(response)
                         print("Parse completed")
                         completion(.success(response))
                     } else {

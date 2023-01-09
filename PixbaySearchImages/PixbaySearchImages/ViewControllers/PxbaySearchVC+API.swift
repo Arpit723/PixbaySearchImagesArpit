@@ -8,6 +8,65 @@
 import Foundation
 import UIKit
 
+/*
+  #Suggestion List
+    1. SearchBar - Focus - Show suggestion List
+    2. Search Button Click: Pass
+    3. API Calls - Hide suggestion List
+    4. Search Bar - cancel button click - Hide suggestion List - Not to show any search results
+  */
+//MARK: Search Bar
+extension PixbaySearchViewController: UISearchBarDelegate {
+    
+    // #Suggestion List: Focus textfield - Show suggestion List
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        print(#function,"#1.Suggestion List: Focus textfield - Show suggestion List")
+        showSuggesionList()
+    }
+    
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        print(#function)
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        print(#function)
+//        handleApiCalls(isCalledFromSearchButtonTapped: true)
+        guard let searchText = searchController.searchBar.text, searchText != "" else {
+            print("searchText not found")
+            return
+        }
+        viewModel.callGetSearchImagesAPI(for: searchText)
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        print(#function)
+        //Hide show suggestin List
+        isToShowSuggestionList = false
+        searchImagesArray = [Hit]()
+        tableViewSearch.reloadData()
+    }
+    func showSuggesionList() {
+        print("#showSuggesionList, #2. SearhcBarFocus")
+        isToShowSuggestionList = true
+        tableViewSearch.reloadData()
+    }
+}
+
+//MARK: Search Utility
+extension PixbaySearchViewController {
+    
+    @objc func handleApiCalls(isCalledFromSearchButtonTapped: Bool = false) {
+        guard let searchText = searchController.searchBar.text, searchText != "" else {
+            print("No search text returns")
+            return
+        }
+        viewModel.callGetSearchImagesAPI(for: searchText)
+    }
+    
+
+}
+
+
 extension PixbaySearchViewController {
     func bindSearchListViewModel() {
         print(#function)
@@ -51,52 +110,6 @@ extension PixbaySearchViewController {
 
 
 
-//MARK: TableView DataSource
-extension PixbaySearchViewController {
-    
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return SuggesionListModel.shared.getSuggesionList().count 
-    }
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-//        if isToShowSuggestionList {
-            let cell : UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell") ?? UITableViewCell(style: .default, reuseIdentifier: "cell")
-            cell.textLabel?.text = SuggesionListModel.shared.getSuggesionList()[indexPath.row]
-            return cell
-//        } else {
-//            guard let cell: ImageTableViewCell = tableView.dequeueReusableCell(withIdentifier: "ImageTableViewCell", for: indexPath) as? ImageTableViewCell else {
-//                return UITableViewCell()
-//            }
-//
-//            let searchItem = searchImagesArray[indexPath.row]
-//            cell.imageViewPixbayItem.showImageWithTheUseOfKingfisher(from: searchItem.userImageURL)
-//            cell.lblTags.text = searchItem.tags
-//            return cell
-//        }
-    }
-
-}
-
-//MARK: TableView Delegate
-extension PixbaySearchViewController {
-    
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if isToShowSuggestionList {
-            return 50.0
-        } else {
-            return UITableView.automaticDimension
-        }
-    }
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-    }
-}
 
 
-//MARK: Utility
-extension PixbaySearchViewController {
-    
-    
-    
-    
-}
+

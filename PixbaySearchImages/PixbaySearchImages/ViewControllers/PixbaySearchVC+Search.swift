@@ -21,49 +21,6 @@ extension PixbaySearchViewController: UISearchResultsUpdating {
     
 }
 
-//MARK: Search bar and suggsion list
-extension PixbaySearchViewController: UISearchBarDelegate {
-    
-    
-    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
-        print(#function)
-        showSuggestionsList()
-        
-    }
-    
-    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
-        print(#function)
-    }
-    
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        print(#function)
-        handleApiCalls(isCalledFromSearchButtonTapped: true)
-    }
-    
-    func showSuggesionList() {
-        print("isToShowSuggestionList \(isToShowSuggestionList)")
-        isToShowSuggestionList = true
-        tableViewSearch.reloadData()
-    }
-}
 
 
-//MARK: Search Utility
-extension PixbaySearchViewController {
-    
-    @objc func handleApiCalls(isCalledFromSearchButtonTapped: Bool = false) {
-        guard let searchText = searchController.searchBar.text, searchText != "" else {
-            print("No search text returns")
-            showSuggestionsList()
-            return
-        }
-        viewModel.callGetSearchImagesAPI(for: searchText,
-                    isCalledFromSearchButtonTapped: isCalledFromSearchButtonTapped)
-    }
-    
-    
-    func showSuggestionsList() {
-        
-    }
-    
-}
+
