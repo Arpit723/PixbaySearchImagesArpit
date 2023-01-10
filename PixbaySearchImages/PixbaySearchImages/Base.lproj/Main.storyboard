@@ -40,7 +40,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aKq-WQ-jMu" userLabel="Button  - Back">
-                                <rect key="frame" x="10" y="423" width="50" height="50"/>
+                                <rect key="frame" x="10" y="254.5" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="Rd3-fO-8nt"/>
                                     <constraint firstAttribute="height" constant="50" id="c29-nu-Bf2"/>
@@ -53,7 +53,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="JEh-PD-5ZZ">
-                                <rect key="frame" x="82" y="104" width="250" height="270.5"/>
+                                <rect key="frame" x="82" y="144" width="250" height="270.5"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Cwx-f4-foR">
                                         <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
@@ -83,7 +83,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="onk-4m-jQ1">
-                                <rect key="frame" x="354" y="423" width="50" height="50"/>
+                                <rect key="frame" x="354" y="254.5" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="IKq-OI-J9C"/>
                                     <constraint firstAttribute="height" constant="50" id="YRF-5q-llj"/>
@@ -112,10 +112,10 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="1qG-qD-qKB" firstAttribute="top" secondItem="hKY-ug-Eyd" secondAttribute="top" constant="20" id="1dx-Qz-ETi"/>
-                            <constraint firstItem="JEh-PD-5ZZ" firstAttribute="top" secondItem="hKY-ug-Eyd" secondAttribute="top" constant="60" id="4C5-AO-YFl"/>
+                            <constraint firstItem="JEh-PD-5ZZ" firstAttribute="top" secondItem="hKY-ug-Eyd" secondAttribute="top" constant="100" id="4C5-AO-YFl"/>
+                            <constraint firstItem="onk-4m-jQ1" firstAttribute="centerY" secondItem="JEh-PD-5ZZ" secondAttribute="centerY" id="7TZ-qZ-qBM"/>
+                            <constraint firstItem="aKq-WQ-jMu" firstAttribute="centerY" secondItem="JEh-PD-5ZZ" secondAttribute="centerY" id="ACi-uh-6U9"/>
                             <constraint firstItem="1qG-qD-qKB" firstAttribute="leading" secondItem="hKY-ug-Eyd" secondAttribute="leading" constant="20" id="BnP-wi-mis"/>
-                            <constraint firstItem="aKq-WQ-jMu" firstAttribute="centerY" secondItem="Zmq-Hc-xAm" secondAttribute="centerY" id="ClL-eg-gxx"/>
-                            <constraint firstItem="onk-4m-jQ1" firstAttribute="centerY" secondItem="Zmq-Hc-xAm" secondAttribute="centerY" id="Hrh-2Q-EY8"/>
                             <constraint firstItem="aKq-WQ-jMu" firstAttribute="leading" secondItem="hKY-ug-Eyd" secondAttribute="leading" constant="10" id="M2e-7S-tRE"/>
                             <constraint firstAttribute="trailing" secondItem="onk-4m-jQ1" secondAttribute="trailing" constant="10" id="WzN-dL-EVx"/>
                             <constraint firstItem="JEh-PD-5ZZ" firstAttribute="centerX" secondItem="Zmq-Hc-xAm" secondAttribute="centerX" id="XRl-WH-2Te"/>

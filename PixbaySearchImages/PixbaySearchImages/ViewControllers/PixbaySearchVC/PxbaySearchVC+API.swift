@@ -59,7 +59,7 @@ extension PixbaySearchViewController {
     func handleResults(hits: [Hit]) {
         if hits.count == 0 {
             self.searchImagesArray = [Hit]()
-//            showAlert(message: MessageStrings.noImagesFound.rawValue)
+            showAlert(message: MessageStrings.noImagesFound.rawValue)
         } else {
             if currentPage == 1 {
                 self.searchImagesArray = hits
