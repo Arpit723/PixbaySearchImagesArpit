@@ -70,6 +70,7 @@ extension PixbaySearchViewController {
             SuggesionListModel.shared.addToSuggestionString(recentSearch: searchController.searchBar.text ?? "")
             isToShowSuggestionList = false
         }
+        searchController.searchBar.resignFirstResponder()
         isLoadingList = false
         self.tableViewSearch.reloadData()
     }

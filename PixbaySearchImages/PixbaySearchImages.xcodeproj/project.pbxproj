@@ -14,21 +14,24 @@
 		6E9DB504296C46F4003D3BC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E9DB503296C46F4003D3BC2 /* Assets.xcassets */; };
 		6E9DB507296C46F4003D3BC2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E9DB505296C46F4003D3BC2 /* LaunchScreen.storyboard */; };
 		6E9DB510296C4A30003D3BC2 /* WebSerivice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9DB50F296C4A30003D3BC2 /* WebSerivice.swift */; };
-		6E9DB514296C4FD3003D3BC2 /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9DB512296C4FD3003D3BC2 /* ImageTableViewCell.swift */; };
-		6E9DB515296C4FD3003D3BC2 /* ImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E9DB513296C4FD3003D3BC2 /* ImageTableViewCell.xib */; };
-		6E9DB518296C54AC003D3BC2 /* PixbaySearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9DB517296C54AC003D3BC2 /* PixbaySearchViewController.swift */; };
 		6E9DB51B296C54E0003D3BC2 /* SearchImagesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9DB51A296C54E0003D3BC2 /* SearchImagesViewModel.swift */; };
 		6E9DB51F296C5667003D3BC2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9DB51E296C5667003D3BC2 /* Constants.swift */; };
 		6E9DB522296C576E003D3BC2 /* SearchResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9DB521296C576E003D3BC2 /* SearchResponseModel.swift */; };
 		6E9DB524296C57CA003D3BC2 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9DB523296C57CA003D3BC2 /* ApiError.swift */; };
 		6E9DB526296C5890003D3BC2 /* SearchAPIStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9DB525296C5890003D3BC2 /* SearchAPIStatus.swift */; };
 		6E9DB529296C5908003D3BC2 /* BoxBind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9DB528296C5908003D3BC2 /* BoxBind.swift */; };
-		6E9DB52B296C59E1003D3BC2 /* PxbaySearchVC+API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9DB52A296C59E1003D3BC2 /* PxbaySearchVC+API.swift */; };
 		6E9DB52D296C5ECC003D3BC2 /* ImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9DB52C296C5ECC003D3BC2 /* ImageView+Extension.swift */; };
 		6E9DB52F296C669D003D3BC2 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9DB52E296C669D003D3BC2 /* UIViewController+Extension.swift */; };
-		6E9DB531296C6AF3003D3BC2 /* PixbaySearchVC+Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9DB530296C6AF3003D3BC2 /* PixbaySearchVC+Search.swift */; };
 		6E9DB533296C6DEF003D3BC2 /* SuggestionListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9DB532296C6DEF003D3BC2 /* SuggestionListModel.swift */; };
-		6E9DB535296CD2F0003D3BC2 /* PixbaySearch+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9DB534296CD2F0003D3BC2 /* PixbaySearch+TableView.swift */; };
+		6EA0717B296D0DE6005568A7 /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA07178296D0DE6005568A7 /* ImageTableViewCell.swift */; };
+		6EA0717C296D0DE6005568A7 /* ImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6EA07179296D0DE6005568A7 /* ImageTableViewCell.xib */; };
+		6EA0717F296D149D005568A7 /* ImageCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA0717D296D149D005568A7 /* ImageCVCell.swift */; };
+		6EA07180296D149D005568A7 /* ImageCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6EA0717E296D149D005568A7 /* ImageCVCell.xib */; };
+		6ED4ABF2296D052A008DFDFE /* PixbaySearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED4ABEE296D0529008DFDFE /* PixbaySearchViewController.swift */; };
+		6ED4ABF3296D052A008DFDFE /* PixbaySearch+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED4ABEF296D0529008DFDFE /* PixbaySearch+TableView.swift */; };
+		6ED4ABF4296D052A008DFDFE /* PxbaySearchVC+API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED4ABF0296D0529008DFDFE /* PxbaySearchVC+API.swift */; };
+		6ED4ABF5296D052A008DFDFE /* PixbaySearchVC+Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED4ABF1296D0529008DFDFE /* PixbaySearchVC+Search.swift */; };
+		6ED4ABF7296D0556008DFDFE /* ImageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED4ABF6296D0556008DFDFE /* ImageDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,21 +45,24 @@
 		6E9DB506296C46F4003D3BC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6E9DB508296C46F4003D3BC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6E9DB50F296C4A30003D3BC2 /* WebSerivice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebSerivice.swift; sourceTree = "<group>"; };
-		6E9DB512296C4FD3003D3BC2 /* ImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
-		6E9DB513296C4FD3003D3BC2 /* ImageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageTableViewCell.xib; sourceTree = "<group>"; };
-		6E9DB517296C54AC003D3BC2 /* PixbaySearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PixbaySearchViewController.swift; sourceTree = "<group>"; };
 		6E9DB51A296C54E0003D3BC2 /* SearchImagesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchImagesViewModel.swift; sourceTree = "<group>"; };
 		6E9DB51E296C5667003D3BC2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		6E9DB521296C576E003D3BC2 /* SearchResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponseModel.swift; sourceTree = "<group>"; };
 		6E9DB523296C57CA003D3BC2 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
 		6E9DB525296C5890003D3BC2 /* SearchAPIStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAPIStatus.swift; sourceTree = "<group>"; };
 		6E9DB528296C5908003D3BC2 /* BoxBind.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoxBind.swift; sourceTree = "<group>"; };
-		6E9DB52A296C59E1003D3BC2 /* PxbaySearchVC+API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PxbaySearchVC+API.swift"; sourceTree = "<group>"; };
 		6E9DB52C296C5ECC003D3BC2 /* ImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImageView+Extension.swift"; sourceTree = "<group>"; };
 		6E9DB52E296C669D003D3BC2 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
-		6E9DB530296C6AF3003D3BC2 /* PixbaySearchVC+Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PixbaySearchVC+Search.swift"; sourceTree = "<group>"; };
 		6E9DB532296C6DEF003D3BC2 /* SuggestionListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionListModel.swift; sourceTree = "<group>"; };
-		6E9DB534296CD2F0003D3BC2 /* PixbaySearch+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PixbaySearch+TableView.swift"; sourceTree = "<group>"; };
+		6EA07178296D0DE6005568A7 /* ImageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
+		6EA07179296D0DE6005568A7 /* ImageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageTableViewCell.xib; sourceTree = "<group>"; };
+		6EA0717D296D149D005568A7 /* ImageCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCVCell.swift; sourceTree = "<group>"; };
+		6EA0717E296D149D005568A7 /* ImageCVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCVCell.xib; sourceTree = "<group>"; };
+		6ED4ABEE296D0529008DFDFE /* PixbaySearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PixbaySearchViewController.swift; sourceTree = "<group>"; };
+		6ED4ABEF296D0529008DFDFE /* PixbaySearch+TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PixbaySearch+TableView.swift"; sourceTree = "<group>"; };
+		6ED4ABF0296D0529008DFDFE /* PxbaySearchVC+API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PxbaySearchVC+API.swift"; sourceTree = "<group>"; };
+		6ED4ABF1296D0529008DFDFE /* PixbaySearchVC+Search.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PixbaySearchVC+Search.swift"; sourceTree = "<group>"; };
+		6ED4ABF6296D0556008DFDFE /* ImageDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailViewController.swift; sourceTree = "<group>"; };
 		A35A7D4CCBC11F3ACE58155F /* Pods-PixbaySearchImages.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PixbaySearchImages.release.xcconfig"; path = "Target Support Files/Pods-PixbaySearchImages/Pods-PixbaySearchImages.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -139,8 +145,8 @@
 		6E9DB511296C4F84003D3BC2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				6E9DB512296C4FD3003D3BC2 /* ImageTableViewCell.swift */,
-				6E9DB513296C4FD3003D3BC2 /* ImageTableViewCell.xib */,
+				6EA07175296D0DE6005568A7 /* CollectionViewCell */,
+				6EA07177296D0DE6005568A7 /* TableViewCell */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -148,10 +154,8 @@
 		6E9DB516296C5487003D3BC2 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				6E9DB517296C54AC003D3BC2 /* PixbaySearchViewController.swift */,
-				6E9DB52A296C59E1003D3BC2 /* PxbaySearchVC+API.swift */,
-				6E9DB530296C6AF3003D3BC2 /* PixbaySearchVC+Search.swift */,
-				6E9DB534296CD2F0003D3BC2 /* PixbaySearch+TableView.swift */,
+				6ED4ABEC296D0529008DFDFE /* DetailVC */,
+				6ED4ABED296D0529008DFDFE /* PixbaySearchVC */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -198,6 +202,43 @@
 				6E9DB528296C5908003D3BC2 /* BoxBind.swift */,
 			);
 			path = CustomClasses;
+			sourceTree = "<group>";
+		};
+		6EA07175296D0DE6005568A7 /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				6EA0717D296D149D005568A7 /* ImageCVCell.swift */,
+				6EA0717E296D149D005568A7 /* ImageCVCell.xib */,
+			);
+			path = CollectionViewCell;
+			sourceTree = "<group>";
+		};
+		6EA07177296D0DE6005568A7 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				6EA07178296D0DE6005568A7 /* ImageTableViewCell.swift */,
+				6EA07179296D0DE6005568A7 /* ImageTableViewCell.xib */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		6ED4ABEC296D0529008DFDFE /* DetailVC */ = {
+			isa = PBXGroup;
+			children = (
+				6ED4ABF6296D0556008DFDFE /* ImageDetailViewController.swift */,
+			);
+			path = DetailVC;
+			sourceTree = "<group>";
+		};
+		6ED4ABED296D0529008DFDFE /* PixbaySearchVC */ = {
+			isa = PBXGroup;
+			children = (
+				6ED4ABEE296D0529008DFDFE /* PixbaySearchViewController.swift */,
+				6ED4ABEF296D0529008DFDFE /* PixbaySearch+TableView.swift */,
+				6ED4ABF0296D0529008DFDFE /* PxbaySearchVC+API.swift */,
+				6ED4ABF1296D0529008DFDFE /* PixbaySearchVC+Search.swift */,
+			);
+			path = PixbaySearchVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,9 +302,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E9DB507296C46F4003D3BC2 /* LaunchScreen.storyboard in Resources */,
-				6E9DB515296C4FD3003D3BC2 /* ImageTableViewCell.xib in Resources */,
+				6EA0717C296D0DE6005568A7 /* ImageTableViewCell.xib in Resources */,
 				6E9DB504296C46F4003D3BC2 /* Assets.xcassets in Resources */,
 				6E9DB4FF296C46F1003D3BC2 /* Main.storyboard in Resources */,
+				6EA07180296D149D005568A7 /* ImageCVCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,23 +358,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E9DB518296C54AC003D3BC2 /* PixbaySearchViewController.swift in Sources */,
 				6E9DB510296C4A30003D3BC2 /* WebSerivice.swift in Sources */,
 				6E9DB51B296C54E0003D3BC2 /* SearchImagesViewModel.swift in Sources */,
 				6E9DB529296C5908003D3BC2 /* BoxBind.swift in Sources */,
 				6E9DB52F296C669D003D3BC2 /* UIViewController+Extension.swift in Sources */,
+				6ED4ABF5296D052A008DFDFE /* PixbaySearchVC+Search.swift in Sources */,
 				6E9DB52D296C5ECC003D3BC2 /* ImageView+Extension.swift in Sources */,
 				6E9DB502296C46F1003D3BC2 /* PixbaySearchImages.xcdatamodeld in Sources */,
+				6ED4ABF7296D0556008DFDFE /* ImageDetailViewController.swift in Sources */,
+				6ED4ABF2296D052A008DFDFE /* PixbaySearchViewController.swift in Sources */,
 				6E9DB526296C5890003D3BC2 /* SearchAPIStatus.swift in Sources */,
+				6ED4ABF3296D052A008DFDFE /* PixbaySearch+TableView.swift in Sources */,
+				6EA0717B296D0DE6005568A7 /* ImageTableViewCell.swift in Sources */,
 				6E9DB51F296C5667003D3BC2 /* Constants.swift in Sources */,
+				6ED4ABF4296D052A008DFDFE /* PxbaySearchVC+API.swift in Sources */,
 				6E9DB533296C6DEF003D3BC2 /* SuggestionListModel.swift in Sources */,
+				6EA0717F296D149D005568A7 /* ImageCVCell.swift in Sources */,
 				6E9DB524296C57CA003D3BC2 /* ApiError.swift in Sources */,
-				6E9DB514296C4FD3003D3BC2 /* ImageTableViewCell.swift in Sources */,
-				6E9DB531296C6AF3003D3BC2 /* PixbaySearchVC+Search.swift in Sources */,
 				6E9DB522296C576E003D3BC2 /* SearchResponseModel.swift in Sources */,
 				6E9DB4F8296C46F1003D3BC2 /* AppDelegate.swift in Sources */,
-				6E9DB52B296C59E1003D3BC2 /* PxbaySearchVC+API.swift in Sources */,
-				6E9DB535296CD2F0003D3BC2 /* PixbaySearch+TableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

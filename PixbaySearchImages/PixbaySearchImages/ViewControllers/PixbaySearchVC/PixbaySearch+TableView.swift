@@ -51,6 +51,17 @@ extension PixbaySearchViewController {
             let searchText = SuggesionListModel.shared.getSuggesionList()[indexPath.item]
             viewModel.callGetSearchImagesAPI(for: searchText,
                                             page: currentPage)
+        } else {
+            let selectedItem = searchImagesArray[indexPath.row]
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            guard let vc = storyboard.instantiateViewController(withIdentifier: "ImageDetailViewController") as? ImageDetailViewController else {
+                print("vc not found")
+                return
+            }
+            vc.selectedImageIndex = indexPath.row
+            vc.searchImageArray = searchImagesArray
+            UIApplication.getTopViewController()?.present(vc, animated: true)
+            
         }
     }
     
