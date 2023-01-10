@@ -16,7 +16,7 @@ class PixbaySearchViewController: UITableViewController {
     var isToShowSuggestionList = false
     
     //MARK: Pagination
-    var currentPage : Int = 0
+    var currentPage : Int = 1
     var isLoadingList : Bool = false
     
     // MARK: - Component
@@ -43,6 +43,10 @@ class PixbaySearchViewController: UITableViewController {
 
     func setUpTableView() {
         tableViewSearch.register(UINib(nibName: "ImageTableViewCell", bundle: nil), forCellReuseIdentifier: "ImageTableViewCell")
+        tableView.refreshControl = UIRefreshControl()
+        self.refreshControl?.addTarget(self, action: #selector(refresh), for: .valueChanged)
+       // not required when using UITableViewController
+
     }
     
     func setUpSearchController() {

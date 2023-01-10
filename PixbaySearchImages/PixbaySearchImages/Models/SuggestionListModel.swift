@@ -18,12 +18,20 @@ struct SuggesionListModel {
     private var suggestionListStrings = [String]()
     
     public mutating func addToSuggestionString(recentSearch: String) {
+        // Removing redundunt seaches
+        if suggestionListStrings.contains(recentSearch) {
+            suggestionListStrings.removeAll(where: {
+                $0 == recentSearch
+            })
+        }
+        // Implement Queue implementation
         suggestionListStrings.insert(recentSearch,
                                      at: 0)
         // Showing maximum lest say 10 suggestion list
         if suggestionListStrings.count > AppConstants.maxSuggestionListToShow {
             suggestionListStrings.removeLast()
         }
+        // Saving to defalts
         UserDefaults.standard.set(suggestionListStrings,
                                   forKey: UserDefaultKeys.suggestionList)
     }

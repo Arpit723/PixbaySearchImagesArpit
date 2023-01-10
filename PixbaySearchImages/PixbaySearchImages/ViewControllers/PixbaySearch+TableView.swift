@@ -12,6 +12,8 @@ import UIKit
 extension PixbaySearchViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print("SuggesionListModel.shared.getSuggesionList().count \(SuggesionListModel.shared.getSuggesionList().count)")
+        print("searchImagesArray.count \(searchImagesArray.count)")
         return isToShowSuggestionList ? SuggesionListModel.shared.getSuggesionList().count : searchImagesArray.count
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -47,7 +49,43 @@ extension PixbaySearchViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if isToShowSuggestionList {
             let searchText = SuggesionListModel.shared.getSuggesionList()[indexPath.item]
-            viewModel.callGetSearchImagesAPI(for: searchText)
+            viewModel.callGetSearchImagesAPI(for: searchText,
+                                            page: currentPage)
         }
     }
+    
+    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        
+        if (((scrollView.contentOffset.y + scrollView.frame.size.height) > scrollView.contentSize.height ) && !isLoadingList) {
+            print(#function)
+            guard let searchText = searchController.searchBar.text,
+                  searchText != "" else {
+                print("Search text not found")
+                return
+            }
+            self.isLoadingList = true
+            loadMoreItemsForList(searchText: searchText)
+            
+    }
+    
+        func loadMoreItemsForList(searchText: String){
+          currentPage += 1
+          viewModel.callGetSearchImagesAPI(for:  searchText,
+                                            page: currentPage)
+        }
+    }
+    
+    @objc func refresh() {
+        print(#function)
+        guard let searchText = searchController.searchBar.text,
+              searchText != "" else {
+            print("Search text not found")
+            return
+        }
+        currentPage = 1
+        viewModel.callGetSearchImagesAPI(for:  searchText,
+                                          page: currentPage)
+    }
 }
+
+

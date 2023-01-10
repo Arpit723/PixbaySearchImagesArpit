@@ -12,10 +12,12 @@ import Foundation
 class SearchImagesViewModel {
     
     let showLoadingHud: Observable<SearchAPIStatus> = Observable(.noStatus)
-    func callGetSearchImagesAPI(for searchString: String) {
+    func callGetSearchImagesAPI(for searchString: String,
+                                page: Int) {
         self.showLoadingHud.value = .loading
         let searchKeywords = getSearchKeywords(from: searchString)
-        WebSerice.getDataApiCall(searchKeywords: searchKeywords, completion: { result in
+        WebSerice.getDataApiCall(searchKeywords: searchKeywords,
+                                    page: page, completion: { result in
             switch result {
                 case .success(let responseData):
                     self.showLoadingHud.value = .success(data: responseData.hits)
